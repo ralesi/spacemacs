@@ -34,6 +34,7 @@
         ido-vertical-mode
         (package-menu :location built-in)
         page-break-lines
+        pcre2el
         popup
         popwin
         (process-menu :location built-in)
@@ -447,6 +448,10 @@
     :init
     (global-page-break-lines-mode t)
     (spacemacs|hide-lighter page-break-lines-mode)))
+
+(defun spacemacs-base/init-pcre2el ()
+  (use-package pcre2el
+    :defer t))
 
 (defun spacemacs-base/init-popup ()
   (use-package popup
